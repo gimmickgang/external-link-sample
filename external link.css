@@ -1,0 +1,35 @@
+/** 全体外部アイコン付与 **/
+a[href^="http"]::after {
+    content: url(/img/ext.webp);
+    display: inline-block;
+    background-size: contain;
+    vertical-align: middle;
+}
+
+
+/** ニコニコ動画外部アイコン付与 **/
+a[href^="https://www.nicovideo.jp/"]::after {
+    content: url(/img/ext_nico.webp);
+}
+
+/** ニコニコ生放送外部アイコン付与 **/
+a[href^="https://live.nicovideo.jp/"]::after {
+    content: url(/img/ext_nl.webp);
+}
+
+/** ニコニコチャンネル外部アイコン付与 **/
+a[href^="https://ch.nicovideo.jp/"]::after {
+    content: url(/img/ext_ch.webp);
+}
+
+
+
+/** 外部アイコン除去指定あり時の除外 **/
+a[href^="http"][style="background-image: none;"]::after {
+    content: "";
+}
+
+/** ニコニコ大百科内リンク（手動リンク）の除外 **/
+a[href^="https://dic.nicovideo.jp"]::after {
+    content: "";
+}
