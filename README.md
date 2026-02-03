@@ -9,4 +9,4 @@
   - nicopedia_style_sp.css
 
 ## 問題点
-スマホ版では記事がspan class="article"内、掲示板レスがul class="sw-Article_List"内、PC版ではdiv class="st-bbs-contents"内のdlに内包されているため、記事本文・掲示板レスのそれぞれ当該部分に限った運用が行えるが、<br>PC版本文の領域はdiv class="article" id="article"内にて、記事下方の【スポンサーリンク】やdiv class="a-list_articleInfo"の初版作成日などの領域と同居している兄弟要素となるため、現状では単体での指定が困難である。<br>これを回避するには本文領域をdivなどで内包しその領域に限った指定をするのが良いと思われる。
+スマホ版では記事がspan class="article"内、掲示板レスがul class="sw-Article_List"内、PC版ではdiv class="st-bbs-contents"内のdlに内包されているため、記事本文・掲示板レスのそれぞれ当該部分に限った運用が行えるが、<br>PC版本文の領域はdiv class="article" id="article"内にて、記事下方の【スポンサーリンク】やdiv class="a-list_articleInfo"の初版作成日などの領域と同居している兄弟要素となるため、現状では単体での指定が困難であり、指定せずに適用しようとするとタグ検索リンク部分などにアイコンが表示される。<br>これを回避するには本文領域をdivなどで内包しその領域に限った指定をするのが良いと思われる。
