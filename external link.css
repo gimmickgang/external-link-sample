@@ -23,7 +23,7 @@ a[href^="https://ch.nicovideo.jp/"]::after {
 }
 
 /** ニコニココモンズ外部アイコン付与 **/
-a[href^="https://ch.nicovideo.jp/"]::after {
+a[href^="https://commons.nicovideo.jp/"]::after {
     content: url(/img/ext_commons.webp);
 }
 
@@ -38,3 +38,4 @@ a[href^="https://dic.nicovideo.jp"]::after {
     content: "";
 
 }
+
