@@ -22,6 +22,10 @@ a[href^="https://ch.nicovideo.jp/"]::after {
     content: url(/img/ext_ch.webp);
 }
 
+/** ニコニココモンズ外部アイコン付与 **/
+a[href^="https://ch.nicovideo.jp/"]::after {
+    content: url(/img/ext_commons.webp);
+}
 
 
 /** 外部アイコン除去指定あり時の除外 **/
@@ -32,4 +36,5 @@ a[href^="http"][style="background-image: none;"]::after {
 /** ニコニコ大百科内リンク（手動リンク）の除外 **/
 a[href^="https://dic.nicovideo.jp"]::after {
     content: "";
+
 }
