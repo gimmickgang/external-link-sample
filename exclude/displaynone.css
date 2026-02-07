@@ -78,11 +78,14 @@ span.article a[href^="https://news.nicovideo.jp/"]::after {
 
 
 /** 外部アイコン除去指定あり時の除外 **/
-.article a:not(.a-banner_space-bottom a, .a-nicoad_supporter a, .a-bottomMenu a, .a-list_articleInfo a, .st-box_contents a, .a-relatedContents a, .a-infoArea_buttons a)[href^="http"][style="background-image: none;"]::after {
+.article a:not(.a-banner_space-bottom a, .a-nicoad_supporter a, .a-bottomMenu a, .a-list_articleInfo a, .st-box_contents a, .a-relatedContents a, .a-infoArea_buttons a)[href^="http"][style="background-image: none;"]::after, 
+span.article a[href^="http"][style="background-image: none;"]::after {
     content: "";
 }
 
 /** ニコニコ大百科内リンク（手動リンク）の除外 **/
-.article a:not(.a-banner_space-bottom a, .a-nicoad_supporter a, .a-bottomMenu a, .a-list_articleInfo a, .st-box_contents a, .a-relatedContents a, .a-infoArea_buttons a)[href^="https://dic.nicovideo.jp"]::after {
+.article a:not(.a-banner_space-bottom a, .a-nicoad_supporter a, .a-bottomMenu a, .a-list_articleInfo a, .st-box_contents a, .a-relatedContents a, .a-infoArea_buttons a)[href^="https://dic.nicovideo.jp"]::after, 
+.bbs_resbody_inner a[href^="https://dic.nicovideo.jp"]::after,
+span.article a[href^="https://dic.nicovideo.jp"]::after {
     content: "";
 }
