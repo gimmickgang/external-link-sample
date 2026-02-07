@@ -38,15 +38,16 @@ a[href^="https://news.nicovideo.jp/"]::after {
 }
 
 
-/** 外部アイコン除去指定あり時の除外 **/
+/** 外部アイコン除去（ユーザーの記事編集による）指定あり時の除外 **/
 a[href^="http"][style="background-image: none;"]::after {
     content: "";
 }
 
-/** ニコニコ大百科内リンク（手動リンク）の除外 **/
+/** ニコニコ大百科内リンク（ユーザーの記事編集による手動リンク）の除外 **/
 a[href^="https://dic.nicovideo.jp"]::after {
     content: "";
 
 }
+
 
 
