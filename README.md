@@ -18,3 +18,12 @@
 ![すくしょ](https://github.com/gimmickgang/external-link-sample/blob/main/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202026-02-04%20030038.png)
 
 - 詳細については[exclude](https://github.com/gimmickgang/external-link-sample/tree/main/exclude)階下のREADME.mdにて解説。サンプルのCSSも同階層に格納。
+
+
+## ニコニコ静画への外部アイコン掲出について
+- 2019年6月11日付けの改修において、『ニコニコ静画引用時のアイコンを
+表示しないように仕様を変更』[リンク](https://ch.nicovideo.jp/nico-nico-pedia/blomaga/ar1774296)しているが、この際に静画の引用時だけではなく静画へのリンク自体へのリンクアイコンの掲出がなくなっているため
+  - 静画へのリンク単独の場合は掲出する（※単語記事『ニコニコ静画』の静画へのリンク箇所など）
+  - 静画引用時は掲出しない（※各記事で静画引用を行っている箇所）
+
+のルールにてリンクアイコンを掲出する（対応するwebp画像、png画像がないためアイコンお絵カキコ画像にて代用）
