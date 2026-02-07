@@ -37,6 +37,11 @@ a[href^="https://news.nicovideo.jp/"]::after {
     content: url(/img/ext_news.webp);
 }
 
+/** ニコニコ静画外部アイコン除去 **/
+a[href^="https://seiga.nicovideo.jp/"]::after {
+    content: "";
+}
+
 
 /** 外部アイコン除去（ユーザーの記事編集による）指定あり時の除外 **/
 a[href^="http"][style="background-image: none;"]::after {
@@ -48,6 +53,7 @@ a[href^="https://dic.nicovideo.jp"]::after {
     content: "";
 
 }
+
 
 
 
