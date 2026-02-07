@@ -38,7 +38,10 @@ a[href^="https://news.nicovideo.jp/"]::after {
 }
 
 /** ニコニコ静画外部アイコン除去 **/
-a[href^="https://seiga.nicovideo.jp/"]::after {
+a[href*="seiga.nicovideo.jp/"]::after {
+    content: url(https://dic.nicovideo.jp/oekaki/122809.png);
+}
+a[href^="https://seiga.nicovideo.jp/seiga/"]:has(> img[src^="https://lohas.nicoseiga.jp/thumb/"])::after {
     content: "";
 }
 
@@ -53,6 +56,7 @@ a[href^="https://dic.nicovideo.jp"]::after {
     content: "";
 
 }
+
 
 
 
