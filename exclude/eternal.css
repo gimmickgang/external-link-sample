@@ -1,0 +1,63 @@
+/** 全体外部アイコン付与 **/
+.article a:not(.a-banner_space-bottom a, .a-nicoad_supporter a, .a-bottomMenu a, .a-list_articleInfo a, .st-box_contents a, .a-relatedContents a, .a-infoArea_buttons a)[href^="http"]::after,
+.bbs_resbody_inner a[href^="http"]::after,
+span.article a[href^="http"]::after {
+    content: url(/img/ext.webp);
+    display: inline-block;
+    background-size: contain;
+    vertical-align: middle;
+}
+
+
+/** ニコニコ動画外部アイコン付与 **/
+.article a:not(.a-banner_space-bottom a, .a-nicoad_supporter a, .a-bottomMenu a, .a-list_articleInfo a, .st-box_contents a, .a-relatedContents a, .a-infoArea_buttons a)[href^="https://www.nicovideo.jp/"]::after,
+.bbs_resbody_inner a[href^="https://www.nicovideo.jp/"]::after,
+span.article a[href^="https://www.nicovideo.jp/"]::after {
+    content: url(/img/ext_nico.webp);
+}
+
+/** マイリスト外部アイコン付与 **/
+.article a:not(.a-banner_space-bottom a, .a-nicoad_supporter a, .a-bottomMenu a, .a-list_articleInfo a, .st-box_contents a, .a-relatedContents a, .a-infoArea_buttons a)[href^="https://www.nicovideo.jp/mylist/"]::after,
+.bbs_resbody_inner a[href^="https://www.nicovideo.jp/mylist/"]::after,
+span.article a[href^="https://www.nicovideo.jp/mylist/"]::after {
+    content: url(/img/ext_list.webp);
+}
+
+/** ニコニコ生放送外部アイコン付与 **/
+.article a:not(.a-banner_space-bottom a, .a-nicoad_supporter a, .a-bottomMenu a, .a-list_articleInfo a, .st-box_contents a, .a-relatedContents a, .a-infoArea_buttons a)[href^="https://live.nicovideo.jp/"]::after,
+.bbs_resbody_inner a[href^="https://live.nicovideo.jp/"]::after,
+span.article a[href^="https://live.nicovideo.jp/"]::after {
+    content: url(/img/ext_nl.webp);
+}
+
+/** ニコニコチャンネル外部アイコン付与 **/
+.article a:not(.a-banner_space-bottom a, .a-nicoad_supporter a, .a-bottomMenu a, .a-list_articleInfo a, .st-box_contents a, .a-relatedContents a, .a-infoArea_buttons a)[href^="https://ch.nicovideo.jp/"]::after,
+.bbs_resbody_inner a[href^="https://ch.nicovideo.jp/"]::after,
+span.article a[href^="https://ch.nicovideo.jp/"]::after {
+    content: url(/img/ext_ch.webp);
+}
+
+/** ニコニココモンズ外部アイコン付与 **/
+.article a:not(.a-banner_space-bottom a, .a-bottomMenu a, .a-list_articleInfo a, .st-box_contents a, .a-relatedContents a, .a-infoArea_buttons a)[href^="https://commons.nicovideo.jp/"]::after,
+.bbs_resbody_inner a[href^="https://commons.nicovideo.jp/"]::after,
+span.article a[href^="https://commons.nicovideo.jp/"]::after {
+    content: url(/img/ext_commons.webp);
+}
+
+/** ニコニコニュース外部アイコン付与 **/
+.article a:not(.a-banner_space-bottom a, .a-nicoad_supporter a, .a-bottomMenu a, .a-list_articleInfo a, .st-box_contents a, .a-relatedContents a, .a-infoArea_buttons a)[href^="https://news.nicovideo.jp/"]::after,
+.bbs_resbody_inner a[href^="https://news.nicovideo.jp/"]::after,
+span.article a[href^="https://news.nicovideo.jp/"]::after {
+    content: url(/img/ext_news.webp);
+}
+
+
+/** 外部アイコン除去指定あり時の除外 **/
+.article a:not(.a-banner_space-bottom a, .a-nicoad_supporter a, .a-bottomMenu a, .a-list_articleInfo a, .st-box_contents a, .a-relatedContents a, .a-infoArea_buttons a)[href^="http"][style="background-image: none;"]::after {
+    content: "";
+}
+
+/** ニコニコ大百科内リンク（手動リンク）の除外 **/
+.article a:not(.a-banner_space-bottom a, .a-nicoad_supporter a, .a-bottomMenu a, .a-list_articleInfo a, .st-box_contents a, .a-relatedContents a, .a-infoArea_buttons a)[href^="https://dic.nicovideo.jp"]::after {
+    content: "";
+}
