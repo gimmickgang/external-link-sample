@@ -39,6 +39,9 @@ CSSファイル　[external link.css](https://github.com/gimmickgang/external-li
 
 のルールにてリンクアイコンを掲出する（対応するwebp画像、png画像がないためアイコンお絵カキコ画像にて代用）
 
+## 表示サンプルページ
+- [サンプルページ](https://gimmickgang.github.io/external-link-sample/)
+
 
 
 ## 問題点
