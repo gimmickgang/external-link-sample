@@ -14,8 +14,8 @@
 ![すくしょ](https://github.com/gimmickgang/external-link-sample/blob/main/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202026-02-04%20024958.png)
 
 ## CSSでのアイコン掲出について
-CSSファイル　[external link.css](https://github.com/gimmickgang/external-link-sample/blob/main/external%20link.css)　にあるように`<a>`タグの属性セレクター`[attr^=value]`を利用して外部リンクとなる項目のみに`::after`疑似要素のcontentを用いてリンクアイコンを掲出する。    
-デフォルト指定の`http`から始まるリンク以外の場合は、静画への指定箇所のように`[attr*=value]`での『文字列中に value を1つ以上含む要素』の指定でもよい。
+CSSファイル　[external link.css](https://github.com/gimmickgang/external-link-sample/blob/main/external%20link.css)　にあるように`<a>`タグの属性セレクター`[attr*=value]`を利用して外部リンクとなる項目のみに`::after`疑似要素のcontentを用いてリンクアイコンを掲出する。    
+デフォルト指定の`http`から始まるリンクの場合は`[attr^=value]`での『value からはじまる要素』、それ以外の場合は`[attr*=value]`での『文字列中に value を1つ以上含む要素』の指定。これは、`https://`ではなく古い`http://`へのリンクのままの記述部分への対応（と本来は考慮すべきではないがWayback Machineなどのアーカイブ系サービスでのリンクURL書き換えが起こった場合への対応）
 
 ### 各アイコンの掲出ルールについて
 現状の外部アイコンの掲出ルールに準じる。
