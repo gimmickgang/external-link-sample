@@ -37,11 +37,13 @@ CSSファイル　[external link.css](https://github.com/gimmickgang/external-li
   - 静画へのリンク単独の場合は掲出する（※単語記事『ニコニコ静画』の静画へのリンク箇所など）
   - 静画引用時は掲出しない（※各記事で静画引用を行っている箇所）
 
-のルールにてリンクアイコンを掲出する（対応するwebp画像、png画像がないためアイコンお絵カキコ画像にて代用）
+のルールにてリンクアイコンを掲出する（対応するwebp画像、png画像がないためサンプルでは、アイコンお絵カキコ画像にて代用）
 
 ## 表示サンプルページ
-- [サンプルページ](https://gimmickgang.github.io/external-link-sample/)
-
+- [サンプルページ(https://gimmickgang.github.io/external-link-sample/)](https://gimmickgang.github.io/external-link-sample/)
+  - 当サンプルページは、exclude階下の`displaynone.css`と同様に`<img>`タグでの外部リンクアイコンの掲出を`display: none;`にて非表示化したものに    
+  `::after`疑似要素にてアイコン掲出を行っている。
+  - 追加スタイルシートは、外部CSSではなく`<style>`タグで追加している。
 
 
 ## 問題点
