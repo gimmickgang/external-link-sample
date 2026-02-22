@@ -4,6 +4,7 @@ a:not([class="dic"])[href^="http"]::after {
     display: inline-block;
     background-size: contain;
     vertical-align: middle;
+    text-indent: 0;
 }
 
 
@@ -78,4 +79,5 @@ a:not([class="dic"])[href*="seiga.nicovideo.jp/seiga/"]:has(> img[src*="lohas.ni
 a:not([class="dic"])[href^="http"][style*="background-image: none;"]::after {
     content: none;
 }
+
 
