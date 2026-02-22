@@ -65,6 +65,11 @@ a:not([class="dic"])[href*="chokuhan.nicovideo.jp"]::after {
 a:not([class="dic"])[href*="com.nicovideo.jp"]::after {
     content: url(/img/ext_community.webp);
 }
+
+/** ニコニ広告　旧ページ　外部アイコン付与 **/
+a:not([class="dic"])[href*="uad.nicovideo.jp"]::after {
+    content: url(/img/ext_ad.webp);
+}
 /** 廃止サービス外部リンクアイコン　ここまで **/
 
 
@@ -73,7 +78,7 @@ a:not([class="dic"])[href*="seiga.nicovideo.jp/"]::after {
     content: url(https://dic.nicovideo.jp/oekaki/494821.png); /** 静画用外部リンクアイコンのwebpがないためお絵カキコにて代用 **/
 }
 a:not([class="dic"])[href*="seiga.nicovideo.jp/seiga/"]:has(> img[src*="lohas.nicoseiga.jp/thumb/"])::after {
-    content: none;
+    content: none; /** 記事への静画引用時の除外指定 **/
 }
 
 
@@ -81,6 +86,7 @@ a:not([class="dic"])[href*="seiga.nicovideo.jp/seiga/"]:has(> img[src*="lohas.ni
 a:not([class="dic"])[href^="http"][style*="background-image: none;"]::after {
     content: none;
 }
+
 
 
 
