@@ -1,5 +1,5 @@
 /** 全体外部アイコン付与 **/
-a[href^="http"]::after {
+a:not([class="dic"])[href^="http"]::after {
     content: url(/img/ext.webp);
     display: inline-block;
     background-size: contain;
@@ -37,28 +37,44 @@ a[href*="news.nicovideo.jp/"]::after {
     content: url(/img/ext_news.webp);
 }
 
-/** ニコニコ静画外部アイコン除去 **/
+/** 廃止サービス外部リンクアイコン　ここから **/
+/** ニコニコアプリ外部アイコン付与 **/
+a[href*="app.nicovideo.jp"]::after {
+    content: url(/img/ext_napp.webp);
+}
+
+/** ニコニコ実況外部アイコン付与 **/
+a[href*="jk.nicovideo.jp"]::after {
+    content: url(/img/ext_jk.webp);
+}
+
+/** ニコニコ市場外部アイコン付与 **/
+a[href*="ichiba.nicovideo.jp"]::after {
+    content: url(/img/ext_ichiba.webp);
+}
+
+/** ニコニコ直販外部アイコン付与 **/
+a[href*="chokuhan.nicovideo.jp"]::after {
+    content: url(/img/ext_chokuhan.webp);
+}
+
+/** ニコニコミュニティ外部アイコン付与 **/
+a[href*="com.nicovideo.jp"]::after {
+    content: url(/img/ext_community.webp);
+}
+/** 廃止サービス外部リンクアイコン　ここまで **/
+
+
+/** ニコニコ静画外部アイコン除去と付与 **/
 a[href*="seiga.nicovideo.jp/"]::after {
-    content: url(https://dic.nicovideo.jp/oekaki/494821.png);
+    content: url(https://dic.nicovideo.jp/oekaki/494821.png); /** 静画用外部リンクアイコンのwebpがないためお絵カキコにて代用 **/
 }
 a[href*="seiga.nicovideo.jp/seiga/"]:has(> img[src*="lohas.nicoseiga.jp/thumb/"])::after {
-    content: "";
+    content: none;
 }
 
 
 /** 外部アイコン除去（ユーザーの記事編集による）指定あり時の除外 **/
-a[href^="http"][style="background-image: none;"]::after {
-    content: "";
+a[href^="http"][style*="background-image: none;"]::after {
+    content: none;
 }
-
-/** ニコニコ大百科内リンク（ユーザーの記事編集による手動リンク）の除外 **/
-a[href*="dic.nicovideo.jp"]::after {
-    content: "";
-
-}
-
-
-
-
-
-
