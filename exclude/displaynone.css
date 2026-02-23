@@ -8,7 +8,7 @@ a[target="_blank"] img.link-icon {
 .bbs_resbody_inner a:not([class="dic"])[href^="http"]::after,
 [id^="embed_res_form_"] .st-bbs_resbody a:not([class="dic"])[href^="http"]::after,
 span.article a:not([class="dic"])[href^="http"]::after {
-    content: url(./img/ext.webp);
+    content: url(/img/ext.webp);
     display: inline-block;
     background-size: contain;
     vertical-align: baseline;
@@ -23,7 +23,7 @@ span.article a:not([class="dic"])[href^="http"]::after {
 .bbs_resbody_inner a:not([class="dic"])[href*="www.nicovideo.jp/"]::after,
 [id^="embed_res_form_"] .st-bbs_resbody a:not([class="dic"])[href*="www.nicovideo.jp/"]::after,
 span.article a:not([class="dic"])[href*="www.nicovideo.jp/"]::after {
-    content: url(./img/ext_nico.webp);
+    content: url(/img/ext_nico.webp);
 }
 
 /** マイリスト外部アイコン付与 **/
@@ -31,7 +31,7 @@ span.article a:not([class="dic"])[href*="www.nicovideo.jp/"]::after {
 .bbs_resbody_inner a:not([class="dic"])[href*="www.nicovideo.jp/mylist/"]::after,
 [id^="embed_res_form_"] .st-bbs_resbody a:not([class="dic"])[href*="www.nicovideo.jp/mylist/"]::after,
 span.article a:not([class="dic"])[href*="www.nicovideo.jp/mylist/"]::after {
-    content: url(./img/ext_list.webp);
+    content: url(/img/ext_list.webp);
 }
 
 /** ニコニコ生放送外部アイコン付与 **/
@@ -39,7 +39,7 @@ span.article a:not([class="dic"])[href*="www.nicovideo.jp/mylist/"]::after {
 .bbs_resbody_inner a:not([class="dic"])[href*="live.nicovideo.jp/"]::after,
 [id^="embed_res_form_"] .st-bbs_resbody a:not([class="dic"])[href*="live.nicovideo.jp/"]::after,
 span.article a:not([class="dic"])[href*="live.nicovideo.jp/"]::after {
-    content: url(./img/ext_nl.webp);
+    content: url(/img/ext_nl.webp);
 }
 
 /** ニコニコチャンネル外部アイコン付与 **/
@@ -47,7 +47,7 @@ span.article a:not([class="dic"])[href*="live.nicovideo.jp/"]::after {
 .bbs_resbody_inner a:not([class="dic"])[href*="ch.nicovideo.jp/"]::after,
 [id^="embed_res_form_"] .st-bbs_resbody a:not([class="dic"])[href*="ch.nicovideo.jp/"]::after,
 span.article a:not([class="dic"])[href*="ch.nicovideo.jp/"]::after {
-    content: url(./img/ext_ch.webp);
+    content: url(/img/ext_ch.webp);
 }
 
 /** ニコニココモンズ外部アイコン付与 **/
@@ -55,7 +55,7 @@ span.article a:not([class="dic"])[href*="ch.nicovideo.jp/"]::after {
 .bbs_resbody_inner a:not([class="dic"])[href*="commons.nicovideo.jp/"]::after,
 [id^="embed_res_form_"] .st-bbs_resbody a:not([class="dic"])[href*="commons.nicovideo.jp/"]::after,
 span.article a:not([class="dic"])[href*="commons.nicovideo.jp/"]::after {
-    content: url(./img/ext_commons.webp);
+    content: url(/img/ext_commons.webp);
 }
 
 /** ニコニコニュース外部アイコン付与 **/
@@ -63,7 +63,7 @@ span.article a:not([class="dic"])[href*="commons.nicovideo.jp/"]::after {
 .bbs_resbody_inner a:not([class="dic"])[href*="news.nicovideo.jp/"]::after,
 [id^="embed_res_form_"] .st-bbs_resbody a:not([class="dic"])[href*="news.nicovideo.jp/"]::after,
 span.article a:not([class="dic"])[href*="news.nicovideo.jp/"]::after {
-    content: url(./img/ext_news.webp);
+    content: url(/img/ext_news.webp);
 }
 
 /** 廃止サービス外部リンクアイコン　ここから **/
@@ -72,7 +72,7 @@ span.article a:not([class="dic"])[href*="news.nicovideo.jp/"]::after {
 .bbs_resbody_inner a:not([class="dic"])[href*="app.nicovideo.jp"]::after,
 [id^="embed_res_form_"] .st-bbs_resbody a:not([class="dic"])[href*="app.nicovideo.jp"]::after,
 span.article a:not([class="dic"])[href*="app.nicovideo.jp"]::after {
-    content: url(./img/ext_napp.webp);
+    content: url(/img/ext_napp.webp);
 }
 
 /** ニコニコ実況外部アイコン付与 **/
@@ -80,7 +80,7 @@ span.article a:not([class="dic"])[href*="app.nicovideo.jp"]::after {
 .bbs_resbody_inner a:not([class="dic"])[href*="jk.nicovideo.jp"]::after,
 [id^="embed_res_form_"] .st-bbs_resbody a:not([class="dic"])[href*="jk.nicovideo.jp"]::after,
 span.article a:not([class="dic"])[href*="jk.nicovideo.jp"]::after {
-    content: url(./img/ext_jk.webp);
+    content: url(/img/ext_jk.webp);
 }
 
 /** ニコニコ市場外部アイコン付与 **/
@@ -88,7 +88,7 @@ span.article a:not([class="dic"])[href*="jk.nicovideo.jp"]::after {
 .bbs_resbody_inner a:not([class="dic"])[href*="ichiba.nicovideo.jp"]::after,
 [id^="embed_res_form_"] .st-bbs_resbody a:not([class="dic"])[href*="ichiba.nicovideo.jp"]::after,
 span.article a:not([class="dic"])[href*="ichiba.nicovideo.jp"]::after {
-    content: url(./img/ext_ichiba.webp);
+    content: url(/img/ext_ichiba.webp);
 }
 
 /** ニコニコ直販外部アイコン付与 **/
@@ -96,7 +96,7 @@ span.article a:not([class="dic"])[href*="ichiba.nicovideo.jp"]::after {
 .bbs_resbody_inner a:not([class="dic"])[href*="chokuhan.nicovideo.jp"]::after,
 [id^="embed_res_form_"] .st-bbs_resbody a:not([class="dic"])[href*="chokuhan.nicovideo.jp"]::after,
 span.article a:not([class="dic"])[href*="chokuhan.nicovideo.jp"]::after {
-    content: url(./img/ext_chokuhan.webp);
+    content: url(/img/ext_chokuhan.webp);
 }
 
 /** ニコニコミュニティ外部アイコン付与 **/
@@ -104,7 +104,7 @@ span.article a:not([class="dic"])[href*="chokuhan.nicovideo.jp"]::after {
 .bbs_resbody_inner a:not([class="dic"])[href*="com.nicovideo.jp"]::after,
 [id^="embed_res_form_"] .st-bbs_resbody a:not([class="dic"])[href*="com.nicovideo.jp"]::after,
 span.article a:not([class="dic"])[href*="com.nicovideo.jp"]::after {
-    content: url(./img/ext_community.webp);
+    content: url(/img/ext_community.webp);
 }
 
 /** ニコニ広告　旧ページ　外部アイコン付与 **/
@@ -112,7 +112,7 @@ span.article a:not([class="dic"])[href*="com.nicovideo.jp"]::after {
 .bbs_resbody_inner a:not([class="dic"])[href*="uad.nicovideo.jp"]::after,
 [id^="embed_res_form_"] .st-bbs_resbody a:not([class="dic"])[href*="uad.nicovideo.jp"]::after,
 span.article a:not([class="dic"])[href*="uad.nicovideo.jp"]::after {
-    content: url(./img/ext_ad.webp);
+    content: url(/img/ext_ad.webp);
 }
 /** 廃止サービス外部リンクアイコン　ここまで **/
 /** ニコニコ静画外部アイコン除去と付与 **/
