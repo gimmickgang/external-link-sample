@@ -15,25 +15,33 @@
 
 ## CSSでのアイコン掲出について
 CSSファイル　[external link.css](https://github.com/gimmickgang/external-link-sample/blob/main/external%20link.css)　にあるように`<a>`タグの属性セレクター`[attr*=value]`を利用して外部リンクとなる項目のみに`::after`疑似要素のcontentを用いてリンクアイコンを掲出する。    
-デフォルト指定の`http`から始まるリンクの場合は`[attr^=value]`での『value からはじまる要素』、それ以外の場合は`[attr*=value]`での『文字列中に value を1つ以上含む要素』の指定。これは、`https://`ではなく古い`http://`へのリンクのままの記述部分への対応（と本来は考慮すべきではないがWayback Machineなどのアーカイブ系サービスでのリンクURL書き換えが起こった場合への対応）
+デフォルト指定の`http`から始まるリンクの場合は`[attr^=value]`での『value からはじまる要素』、それ以外の場合は`[attr*=value]`での『文字列中に value を1つ以上含む要素』の指定。これは、`https://`ではなく古い`http://`へのリンクのままの記述部分への対応
 
 ### 各アイコンの掲出ルールについて
 現状の外部アイコンの掲出ルールに準じる。
 - ![ext.webp](https://github.com/gimmickgang/external-link-sample/blob/main/img/ext.webp)　デフォルト外部リンクアイコン　下記ニコニコ内サービス以外の全ての外部リンクに掲出　`http`から始まるリンクに掲出
-  - `http`からの指定により、自動リンクなどの相対パスでの指定されたリンクを除外する。
+  - `:not([class="dic"])`の指定により、自動リンクなどを含めたニコニコ大百科内のリンクを除外する。
+  - `http`からの指定により、`http`と`https`双方を含めた外部リンクを抽出する。
 - ![ext_nico.webp](https://github.com/gimmickgang/external-link-sample/blob/main/img/ext_nico.webp)　ニコニコ動画リンクアイコン　動画視聴ページなど、`www.nicovideo.jp`から始まるリンクに掲出
 - ![ext_list.webp](https://github.com/gimmickgang/external-link-sample/blob/main/img/ext_list.webp)　マイリストリンクアイコン　`www.nicovideo.jp/mylist/`から始まるリンクに掲出
 - ![ext_nl.webp](https://github.com/gimmickgang/external-link-sample/blob/main/img/ext_nl.webp)　ニコニコ生放送リンクアイコン　`live.nicovideo.jp`から始まるリンクに掲出
 - ![ext_ch.webp](https://github.com/gimmickgang/external-link-sample/blob/main/img/ext_ch.webp)　ニコニコチャンネルリンクアイコン　`ch.nicovideo.jp`から始まるリンクに掲出
 - ![ext_commons.webp](https://github.com/gimmickgang/external-link-sample/blob/main/img/ext_commons.webp)　ニコニコモンズリンクアイコン　`commons.nicovideo.jp`から始まるリンクに掲出
 - ![ext_news.webp](https://github.com/gimmickgang/external-link-sample/blob/main/img/ext_news.webp)　ニコニコチャンネルリンクアイコン　`news.nicovideo.jp`から始まるリンクに掲出
+- 終了したニコニコのサービス群へのリンクアイコン掲出
+  - ![ext_napp.webp](https://github.com/gimmickgang/external-link-sample/blob/main/img/ext_napp.webp)　ニコニコアプリリンクアイコン　`app.nicovideo.jp`から始まるリンクに掲出
+  - ![ext_jk.webp](https://github.com/gimmickgang/external-link-sample/blob/main/img/ext_jk.webp)　ニコニコ実況リンクアイコン　`jk.nicovideo.jp`から始まるリンクに掲出　ニコニコ実況はニコ生形式に移行
+  - ![ext_ichiba.webp](https://github.com/gimmickgang/external-link-sample/blob/main/img/ext_ichiba.webp)　ニコニコ市場リンクアイコン　`ichiba.nicovideo.jp`から始まるリンクに掲出
+  - ![ext_chokuhan.webp](https://github.com/gimmickgang/external-link-sample/blob/main/img/ext_chokuhan.webp)　ニコニコ直販リンクアイコン　`chokuhan.nicovideo.jp`から始まるリンクに掲出
+  - ![ext_community.webp](https://github.com/gimmickgang/external-link-sample/blob/main/img/ext_community.webp)　ニコニコミュニティリンクアイコン　`com.nicovideo.jp`から始まるリンクに掲出
+  - ![ext_ad.webp](https://github.com/gimmickgang/external-link-sample/blob/main/img/ext_ad.webp)　ニコニ広告リンクアイコン　`uad.nicovideo.jp`から始まるリンクに掲出　（旧ページ）
 - ~~![ext_sg.png](https://github.com/gimmickgang/external-link-sample/blob/main/img/ext_sg.png)　ニコニコ静画リンクアイコン　`seiga.nicovideo.jp`から始まるリンクに掲出~~静画リンクアイコンについては後述
-- （記事本文内）記事編集者ユーザーによる`<a>`タグへの外部アイコン非表示の指定`style="background-image: none;"`が存在する場合は、現状でも外部リンクアイコンの掲出を行わない仕様なので、それに準じて非表示とする。
-- `dic.nicovideo.jp`から始まるリンクを除外することにより、ユーザーの編集での絶対パスによるリンク指定、および掲示板での`http`から始まる文字列に対するリンク付与時のニコニコ大百科内へのリンク時に外部リンクアイコンが生成されるのを除外する。
+- （記事本文内）記事編集者ユーザーによる`<a>`タグへの外部アイコン非表示の指定（[参考リンク　HTMLテンプレート集![ext.webp](https://github.com/gimmickgang/external-link-sample/blob/main/img/ext.webp)](https://dic.nicovideo.jp/id/435535#icon)）である`style="background-image: none;"`が存在する場合は、現状でも外部リンクアイコンの掲出を行わない仕様なので、それに準じて非表示とする。
+  - 掲出除外指定時は`::after`疑似要素のcontentを`none`にすることによって`::after`疑似要素自体の生成を行わない。
 
 #### ニコニコ静画への外部アイコン掲出について
 - 2019年6月11日付けの改修において、『ニコニコ静画引用時のアイコンを
-表示しないように仕様を変更』（[リンク](https://ch.nicovideo.jp/nico-nico-pedia/blomaga/ar1774296)）しているが、この際に静画の引用時だけではなく静画へのリンク自体へのリンクアイコンの掲出がなくなっているため
+表示しないように仕様を変更』（[参考リンク　ニコニコ大百科ブロマガ(仮)![ext.webp](https://github.com/gimmickgang/external-link-sample/blob/main/img/ext.webp)](https://ch.nicovideo.jp/nico-nico-pedia/blomaga/ar1774296)）しているが、この際に静画の引用時だけではなく静画へのリンク自体へのリンクアイコンの掲出がなくなっているため
   - 静画へのリンク単独の場合は掲出する（※単語記事『ニコニコ静画』の静画へのリンク箇所など）
   - 静画引用時は掲出しない（※各記事で静画引用を行っている箇所）
 
@@ -43,7 +51,7 @@ CSSファイル　[external link.css](https://github.com/gimmickgang/external-li
 - [サンプルページ(https://gimmickgang.github.io/external-link-sample/)](https://gimmickgang.github.io/external-link-sample/)
   - 当サンプルページは、exclude階下の`displaynone.css`と同様に`<img>`タグでの外部リンクアイコンの掲出を`display: none;`にて非表示化したものに    
   `::after`疑似要素にてアイコン掲出を行っている。
-  - 追加スタイルシートは、外部CSSではなく`<style>`タグで追加している。
+  - 追加スタイルシートは、制限により外部CSSではなく`<style>`タグで追加している。
 
 
 ## 問題点
