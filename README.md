@@ -20,8 +20,8 @@ CSSファイル　[external link.css](https://github.com/gimmickgang/external-li
 ### 各アイコンの掲出ルールについて
 現状の外部アイコンの掲出ルールに準じる。
 - ![ext.webp](https://github.com/gimmickgang/external-link-sample/blob/main/img/ext.webp)　デフォルト外部リンクアイコン　下記ニコニコ内サービス以外の全ての外部リンクに掲出　`http`から始まるリンクに掲出
-  - `:not([class="dic"])`の指定により、自動リンクなどを含めたニコニコ大百科内のリンクを除外する。
-  - `http`からの指定により、`http`と`https`双方を含めた外部リンクを抽出する。
+  - `:not([class="dic"])`の指定により、ニコニコ大百科内の手動リンクを除外する。
+  - `http`からの指定により、相対パス指定の自動リンクなどを除外し、`http`と`https`双方を含めた外部リンクを抽出する。
 - ![ext_nico.webp](https://github.com/gimmickgang/external-link-sample/blob/main/img/ext_nico.webp)　ニコニコ動画リンクアイコン　動画視聴ページなど、`www.nicovideo.jp`から始まるリンクに掲出
 - ![ext_list.webp](https://github.com/gimmickgang/external-link-sample/blob/main/img/ext_list.webp)　マイリストリンクアイコン　`www.nicovideo.jp/mylist/`から始まるリンクに掲出
 - ![ext_nl.webp](https://github.com/gimmickgang/external-link-sample/blob/main/img/ext_nl.webp)　ニコニコ生放送リンクアイコン　`live.nicovideo.jp`から始まるリンクに掲出
