@@ -31,142 +31,103 @@
 <link id="jqplotcss" rel="stylesheet" type="text/css" href="" >
 <link rel="search" type="application/opensearchdescription+xml" title="ニコニコ大百科" href="/opensearch.xml">
 
+</head>
+
+      
 <!--　追加CSS　-->
 <style>/**現行の外部リンクアイコンextの掲出をdisplaynoneで強制的に無効化**/
-.article a:not(.a-banner_space-bottom a, .a-nicoad_supporter a, .a-bottomMenu a, .a-list_articleInfo a, .st-box_contents a, .a-relatedContents a, .a-infoArea_buttons a)[href*="http"] > img[src*="/img/ext"],
-.bbs_resbody_inner a[href*="http"] > img[src*="/img/ext"],
-[id^="embed_res_form_"] .st-bbs_resbody a[href*="http"] > img[src*="/img/ext"],
-span.article a[href*="http"] > img[src*="/img/ext"] {
-    display: none;
+.article a:not(.a-banner_space-bottom a, .a-nicoad_supporter a, .a-bottomMenu a, .a-list_articleInfo a, .st-box_contents a, .a-relatedContents a, .a-infoArea_buttons a)[href^="http"] > img[src="/img/ext.webp"],
+.bbs_resbody_inner a[href^="http"] > img[src="/img/ext.webp"],
+span.article a[href^="http"] > img[src="/img/ext.webp"],
+.article a:not(.a-banner_space-bottom a, .a-nicoad_supporter a, .a-bottomMenu a, .a-list_articleInfo a, .st-box_contents a, .a-relatedContents a, .a-infoArea_buttons a)[href^="https://www.nicovideo.jp/"] > img[src="/img/ext_nico.webp"],
+.bbs_resbody_inner a[href^="https://www.nicovideo.jp/"] > img[src="/img/ext_nico.webp"],
+span.article a[href^="https://www.nicovideo.jp/"] > img[src="/img/ext_nico.webp"],
+.article a:not(.a-banner_space-bottom a, .a-nicoad_supporter a, .a-bottomMenu a, .a-list_articleInfo a, .st-box_contents a, .a-relatedContents a, .a-infoArea_buttons a)[href^="https://www.nicovideo.jp/mylist/"] > img[src="/img/ext_list.webp"],
+.bbs_resbody_inner a[href^="https://www.nicovideo.jp/mylist/"] > img[src="/img/ext_list.webp"],
+span.article a[href^="https://www.nicovideo.jp/mylist/"] > img[src="/img/ext_list.webp"],
+.article a:not(.a-banner_space-bottom a, .a-nicoad_supporter a, .a-bottomMenu a, .a-list_articleInfo a, .st-box_contents a, .a-relatedContents a, .a-infoArea_buttons a)[href^="https://live.nicovideo.jp/"] > img[src="/img/ext_nl.webp"],
+.bbs_resbody_inner a[href^="https://live.nicovideo.jp/"] > img[src="/img/ext_nl.webp"],
+span.article a[href^="https://live.nicovideo.jp/"] > img[src="/img/ext_nl.webp"],
+.article a:not(.a-banner_space-bottom a, .a-nicoad_supporter a, .a-bottomMenu a, .a-list_articleInfo a, .st-box_contents a, .a-relatedContents a, .a-infoArea_buttons a)[href^="https://ch.nicovideo.jp/"] > img[src="/img/ext_ch.webp"],
+.bbs_resbody_inner a[href^="https://ch.nicovideo.jp/"] > img[src="/img/ext_ch.webp"],
+span.article a[href^="https://ch.nicovideo.jp/"] > img[src="/img/ext_ch.webp"],
+.article a:not(.a-banner_space-bottom a, .a-nicoad_supporter a, .a-bottomMenu a, .a-list_articleInfo a, .st-box_contents a, .a-relatedContents a, .a-infoArea_buttons a)[href^="https://commons.nicovideo.jp/"] > img[src="/img/ext_commons.webp"],
+.bbs_resbody_inner a[href^="https://commons.nicovideo.jp/"] > img[src="/img/ext_commons.webp"],
+span.article a[href^="https://commons.nicovideo.jp/"] > img[src="/img/ext_commons.webp"],
+.article a:not(.a-banner_space-bottom a, .a-nicoad_supporter a, .a-bottomMenu a, .a-list_articleInfo a, .st-box_contents a, .a-relatedContents a, .a-infoArea_buttons a)[href^="https://news.nicovideo.jp/"] > img[src="/img/ext_news.webp"],
+.bbs_resbody_inner a[href^="https://news.nicovideo.jp/"] > img[src="/img/ext_news.webp"],
+span.article a[href^="https://news.nicovideo.jp/"] > img[src="/img/ext_news.webp"] {
+    display: none;
 }
 
 /** 全体外部アイコン付与 **/
-.article a:not(.a-banner_space-bottom a, .a-nicoad_supporter a, .a-bottomMenu a, .a-list_articleInfo a, .st-box_contents a, .a-relatedContents a, .a-infoArea_buttons a, [class="dic"])[href*="http"]::after,
-.bbs_resbody_inner a:not([class="dic"])[href*="http"]::after,
-[id^="embed_res_form_"] .st-bbs_resbody a:not([class="dic"])[href*="http"]::after,
-span.article a:not([class="dic"])[href*="http"]::after {
-    content: url(https://raw.githubusercontent.com/gimmickgang/external-link-sample/refs/heads/main/img/ext.webp);
-    display: inline-block;
-    background-size: contain;
-    vertical-align: baseline;
-    width: 10px;
-    height: 10px;
-    text-indent: 0;
+.article a:not(.a-banner_space-bottom a, .a-nicoad_supporter a, .a-bottomMenu a, .a-list_articleInfo a, .st-box_contents a, .a-relatedContents a, .a-infoArea_buttons a)[href^="http"]::after,
+.bbs_resbody_inner a[href^="http"]::after,
+span.article a[href^="http"]::after {
+    content: url(https://raw.githubusercontent.com/gimmickgang/external-link-sample/refs/heads/main/img/ext.webp);
+    display: inline-block;
+    background-size: contain;
+    vertical-align: middle;
 }
 
 
 /** ニコニコ動画外部アイコン付与 **/
-.article a:not(.a-banner_space-bottom a, .a-nicoad_supporter a, .a-bottomMenu a, .a-list_articleInfo a, .st-box_contents a, .a-relatedContents a, .a-infoArea_buttons a, [class="dic"])[href*="www.nicovideo.jp/"]::after,
-.bbs_resbody_inner a:not([class="dic"])[href*="www.nicovideo.jp/"]::after,
-[id^="embed_res_form_"] .st-bbs_resbody a:not([class="dic"])[href*="www.nicovideo.jp/"]::after,
-span.article a:not([class="dic"])[href*="www.nicovideo.jp/"]::after {
-    content: url(https://raw.githubusercontent.com/gimmickgang/external-link-sample/refs/heads/main/img/ext_nico.webp);
+.article a:not(.a-banner_space-bottom a, .a-nicoad_supporter a, .a-bottomMenu a, .a-list_articleInfo a, .st-box_contents a, .a-relatedContents a, .a-infoArea_buttons a)[href*="www.nicovideo.jp/"]::after,
+.bbs_resbody_inner a[href*="www.nicovideo.jp/"]::after,
+span.article a[href*="www.nicovideo.jp/"]::after {
+    content: url(https://raw.githubusercontent.com/gimmickgang/external-link-sample/refs/heads/main/img/ext_nico.webp);
 }
 
 /** マイリスト外部アイコン付与 **/
-.article a:not(.a-banner_space-bottom a, .a-nicoad_supporter a, .a-bottomMenu a, .a-list_articleInfo a, .st-box_contents a, .a-relatedContents a, .a-infoArea_buttons a, [class="dic"])[href*="www.nicovideo.jp/mylist/"]::after,
-.bbs_resbody_inner a:not([class="dic"])[href*="www.nicovideo.jp/mylist/"]::after,
-[id^="embed_res_form_"] .st-bbs_resbody a:not([class="dic"])[href*="www.nicovideo.jp/mylist/"]::after,
-span.article a:not([class="dic"])[href*="www.nicovideo.jp/mylist/"]::after {
-    content: url(https://raw.githubusercontent.com/gimmickgang/external-link-sample/refs/heads/main/img/ext_list.webp);
+.article a:not(.a-banner_space-bottom a, .a-nicoad_supporter a, .a-bottomMenu a, .a-list_articleInfo a, .st-box_contents a, .a-relatedContents a, .a-infoArea_buttons a)[href*="www.nicovideo.jp/mylist/"]::after,
+.bbs_resbody_inner a[href*="www.nicovideo.jp/mylist/"]::after,
+span.article a[href*="www.nicovideo.jp/mylist/"]::after {
+    content: url(https://raw.githubusercontent.com/gimmickgang/external-link-sample/refs/heads/main/img/ext_list.webp);
 }
 
 /** ニコニコ生放送外部アイコン付与 **/
-.article a:not(.a-banner_space-bottom a, .a-nicoad_supporter a, .a-bottomMenu a, .a-list_articleInfo a, .st-box_contents a, .a-relatedContents a, .a-infoArea_buttons a, [class="dic"])[href*="live.nicovideo.jp/"]::after,
-.bbs_resbody_inner a:not([class="dic"])[href*="live.nicovideo.jp/"]::after,
-[id^="embed_res_form_"] .st-bbs_resbody a:not([class="dic"])[href*="live.nicovideo.jp/"]::after,
-span.article a:not([class="dic"])[href*="live.nicovideo.jp/"]::after {
-    content: url(https://raw.githubusercontent.com/gimmickgang/external-link-sample/refs/heads/main/img/ext_nl.webp);
+.article a:not(.a-banner_space-bottom a, .a-nicoad_supporter a, .a-bottomMenu a, .a-list_articleInfo a, .st-box_contents a, .a-relatedContents a, .a-infoArea_buttons a)[href*="live.nicovideo.jp/"]::after,
+.bbs_resbody_inner a[href*="live.nicovideo.jp/"]::after,
+span.article a[href*="live.nicovideo.jp/"]::after {
+    content: url(https://raw.githubusercontent.com/gimmickgang/external-link-sample/refs/heads/main/img/ext_nl.webp);
 }
 
 /** ニコニコチャンネル外部アイコン付与 **/
-.article a:not(.a-banner_space-bottom a, .a-nicoad_supporter a, .a-bottomMenu a, .a-list_articleInfo a, .st-box_contents a, .a-relatedContents a, .a-infoArea_buttons a, [class="dic"])[href*="ch.nicovideo.jp/"]::after,
-.bbs_resbody_inner a:not([class="dic"])[href*="ch.nicovideo.jp/"]::after,
-[id^="embed_res_form_"] .st-bbs_resbody a:not([class="dic"])[href*="ch.nicovideo.jp/"]::after,
-span.article a:not([class="dic"])[href*="ch.nicovideo.jp/"]::after {
-    content: url(https://raw.githubusercontent.com/gimmickgang/external-link-sample/refs/heads/main/img/ext_ch.webp);
+.article a:not(.a-banner_space-bottom a, .a-nicoad_supporter a, .a-bottomMenu a, .a-list_articleInfo a, .st-box_contents a, .a-relatedContents a, .a-infoArea_buttons a)[href*="ch.nicovideo.jp/"]::after,
+.bbs_resbody_inner a[href*="ch.nicovideo.jp/"]::after,
+span.article a[href*="ch.nicovideo.jp/"]::after {
+    content: url(https://raw.githubusercontent.com/gimmickgang/external-link-sample/refs/heads/main/img/ext_ch.webp);
 }
 
 /** ニコニココモンズ外部アイコン付与 **/
-.article a:not(.a-banner_space-bottom a, .a-nicoad_supporter a, .a-bottomMenu a, .a-list_articleInfo a, .st-box_contents a, .a-relatedContents a, .a-infoArea_buttons a, [class="dic"])[href*="commons.nicovideo.jp/"]::after,
-.bbs_resbody_inner a:not([class="dic"])[href*="commons.nicovideo.jp/"]::after,
-[id^="embed_res_form_"] .st-bbs_resbody a:not([class="dic"])[href*="commons.nicovideo.jp/"]::after,
-span.article a:not([class="dic"])[href*="commons.nicovideo.jp/"]::after {
-    content: url(https://raw.githubusercontent.com/gimmickgang/external-link-sample/refs/heads/main/img/ext_commons.webp);
+.article a:not(.a-banner_space-bottom a, .a-bottomMenu a, .a-list_articleInfo a, .st-box_contents a, .a-relatedContents a, .a-infoArea_buttons a)[href*="commons.nicovideo.jp/"]::after,
+.bbs_resbody_inner a[href*="commons.nicovideo.jp/"]::after,
+span.article a[href*="commons.nicovideo.jp/"]::after {
+    content: url(https://raw.githubusercontent.com/gimmickgang/external-link-sample/refs/heads/main/img/ext_commons.webp);
 }
 
 /** ニコニコニュース外部アイコン付与 **/
-.article a:not(.a-banner_space-bottom a, .a-nicoad_supporter a, .a-bottomMenu a, .a-list_articleInfo a, .st-box_contents a, .a-relatedContents a, .a-infoArea_buttons a, [class="dic"])[href*="news.nicovideo.jp/"]::after,
-.bbs_resbody_inner a:not([class="dic"])[href*="news.nicovideo.jp/"]::after,
-[id^="embed_res_form_"] .st-bbs_resbody a:not([class="dic"])[href*="news.nicovideo.jp/"]::after,
-span.article a:not([class="dic"])[href*="news.nicovideo.jp/"]::after {
-    content: url(https://raw.githubusercontent.com/gimmickgang/external-link-sample/refs/heads/main/img/ext_news.webp);
+.article a:not(.a-banner_space-bottom a, .a-nicoad_supporter a, .a-bottomMenu a, .a-list_articleInfo a, .st-box_contents a, .a-relatedContents a, .a-infoArea_buttons a)[href*="news.nicovideo.jp/"]::after,
+.bbs_resbody_inner a[href*="news.nicovideo.jp/"]::after,
+span.article a[href*="news.nicovideo.jp/"]::after {
+    content: url(https://raw.githubusercontent.com/gimmickgang/external-link-sample/refs/heads/main/img/ext_news.webp);
 }
 
-/** 廃止サービス外部リンクアイコン　ここから **/
-/** ニコニコアプリ外部アイコン付与 **/
-.article a:not(.a-banner_space-bottom a, .a-nicoad_supporter a, .a-bottomMenu a, .a-list_articleInfo a, .st-box_contents a, .a-relatedContents a, .a-infoArea_buttons a, [class="dic"])[href*="app.nicovideo.jp"]::after,
-.bbs_resbody_inner a:not([class="dic"])[href*="app.nicovideo.jp"]::after,
-[id^="embed_res_form_"] .st-bbs_resbody a:not([class="dic"])[href*="app.nicovideo.jp"]::after,
-span.article a:not([class="dic"])[href*="app.nicovideo.jp"]::after {
-    content: url(https://raw.githubusercontent.com/gimmickgang/external-link-sample/refs/heads/main/img/ext_napp.webp);
-}
-
-/** ニコニコ実況外部アイコン付与 **/
-.article a:not(.a-banner_space-bottom a, .a-nicoad_supporter a, .a-bottomMenu a, .a-list_articleInfo a, .st-box_contents a, .a-relatedContents a, .a-infoArea_buttons a, [class="dic"])[href*="jk.nicovideo.jp"]::after,
-.bbs_resbody_inner a:not([class="dic"])[href*="jk.nicovideo.jp"]::after,
-[id^="embed_res_form_"] .st-bbs_resbody a:not([class="dic"])[href*="jk.nicovideo.jp"]::after,
-span.article a:not([class="dic"])[href*="jk.nicovideo.jp"]::after {
-    content: url(https://raw.githubusercontent.com/gimmickgang/external-link-sample/refs/heads/main/img/ext_jk.webp);
-}
-
-/** ニコニコ市場外部アイコン付与 **/
-.article a:not(.a-banner_space-bottom a, .a-nicoad_supporter a, .a-bottomMenu a, .a-list_articleInfo a, .st-box_contents a, .a-relatedContents a, .a-infoArea_buttons a, [class="dic"])[href*="ichiba.nicovideo.jp"]::after,
-.bbs_resbody_inner a:not([class="dic"])[href*="ichiba.nicovideo.jp"]::after,
-[id^="embed_res_form_"] .st-bbs_resbody a:not([class="dic"])[href*="ichiba.nicovideo.jp"]::after,
-span.article a:not([class="dic"])[href*="ichiba.nicovideo.jp"]::after {
-    content: url(https://raw.githubusercontent.com/gimmickgang/external-link-sample/refs/heads/main/img/ext_ichiba.webp);
-}
-
-/** ニコニコ直販外部アイコン付与 **/
-.article a:not(.a-banner_space-bottom a, .a-nicoad_supporter a, .a-bottomMenu a, .a-list_articleInfo a, .st-box_contents a, .a-relatedContents a, .a-infoArea_buttons a, [class="dic"])[href*="chokuhan.nicovideo.jp"]::after,
-.bbs_resbody_inner a:not([class="dic"])[href*="chokuhan.nicovideo.jp"]::after,
-[id^="embed_res_form_"] .st-bbs_resbody a:not([class="dic"])[href*="chokuhan.nicovideo.jp"]::after,
-span.article a:not([class="dic"])[href*="chokuhan.nicovideo.jp"]::after {
-    content: url(https://raw.githubusercontent.com/gimmickgang/external-link-sample/refs/heads/main/img/ext_chokuhan.webp);
-}
-
-/** ニコニコミュニティ外部アイコン付与 **/
-.article a:not(.a-banner_space-bottom a, .a-nicoad_supporter a, .a-bottomMenu a, .a-list_articleInfo a, .st-box_contents a, .a-relatedContents a, .a-infoArea_buttons a, [class="dic"])[href*="com.nicovideo.jp"]::after,
-.bbs_resbody_inner a:not([class="dic"])[href*="com.nicovideo.jp"]::after,
-[id^="embed_res_form_"] .st-bbs_resbody a:not([class="dic"])[href*="com.nicovideo.jp"]::after,
-span.article a:not([class="dic"])[href*="com.nicovideo.jp"]::after {
-    content: url(https://raw.githubusercontent.com/gimmickgang/external-link-sample/refs/heads/main/img/ext_community.webp);
-}
-/** 廃止サービス外部リンクアイコン　ここまで **/
-
-
-/** ニコニコ静画外部アイコン除去と付与 **/
-.article a:not(.a-banner_space-bottom a, .a-nicoad_supporter a, .a-bottomMenu a, .a-list_articleInfo a, .st-box_contents a, .a-relatedContents a, .a-infoArea_buttons a, [class="dic"])[href*="seiga.nicovideo.jp/"]::after,
-.bbs_resbody_inner a:not([class="dic"])[href*="seiga.nicovideo.jp/"]::after,
-[id^="embed_res_form_"] .st-bbs_resbody a:not([class="dic"])[href*="seiga.nicovideo.jp/"]::after,
-span.article a:not([class="dic"])[href*="seiga.nicovideo.jp/"]::after {
-    content: url(https://dic.nicovideo.jp/oekaki/494821.png);
-    /** 静画用外部リンクアイコンのwebpがないためお絵カキコにて代用 **/
-}
-.article a:not(.a-banner_space-bottom a, .a-nicoad_supporter a, .a-bottomMenu a, .a-list_articleInfo a, .st-box_contents a, .a-relatedContents a, .a-infoArea_buttons a, [class="dic"])[href*="seiga.nicovideo.jp/seiga/"]:has(> img[src*="lohas.nicoseiga.jp/thumb/"])::after {
-    content: none;
-}
 
 /** 外部アイコン除去指定あり時の除外 **/
-.article a:not(.a-banner_space-bottom a, .a-nicoad_supporter a, .a-bottomMenu a, .a-list_articleInfo a, .st-box_contents a, .a-relatedContents a, .a-infoArea_buttons a, [class="dic"])[href^="http"][style*="background-image: none;"]::after,
-span.article a:not([class="dic"])[href^="http"][style*="background-image: none;"]::after {
-    content: none;
+.article a:not(.a-banner_space-bottom a, .a-nicoad_supporter a, .a-bottomMenu a, .a-list_articleInfo a, .st-box_contents a, .a-relatedContents a, .a-infoArea_buttons a)[href^="http"][style="background-image: none;"]::after, 
+span.article a[href^="http"][style="background-image: none;"]::after {
+    content: "";
+}
+
+/** ニコニコ大百科内リンク（手動リンク）の除外 **/
+.article a:not(.a-banner_space-bottom a, .a-nicoad_supporter a, .a-bottomMenu a, .a-list_articleInfo a, .st-box_contents a, .a-relatedContents a, .a-infoArea_buttons a)[href*="dic.nicovideo.jp"]::after, 
+.bbs_resbody_inner a[href*="dic.nicovideo.jp"]::after,
+span.article a[href*="dic.nicovideo.jp"]::after {
+    content: "";
 }
 </style>
 
-
-</head>
       
 <body id="basebody">
   <div id="container">
@@ -182,11 +143,11 @@ span.article a:not([class="dic"])[href^="http"][style*="background-image: none;"
 </li>
 <li><a title="利用規約" href="/d/html/tos/" class="dic">利用規約</a>
 </li>
-<li><a href="http://d.hatena.ne.jp/nicodic/" target="_blank" rel="nofollow">ニコニコ大百科開発日記<img src="https://dic.nicovideo.jp/img/ext.webp" class="link-icon" alt="exit"></a>（旧<a class="auto" href="/a/%E6%97%A5%E8%A8%98">日記</a>）</li>
-<li><a href="http://blog.livedoor.jp/nico_nico_pedia/" target="_blank" rel="nofollow">ニコニコ大百科運営日記<img src="https://dic.nicovideo.jp/img/ext.webp" class="link-icon" alt="exit"></a>（旧<a class="auto" href="/a/%E6%97%A5%E8%A8%98">日記</a>）</li>
-<li><a href="https://ch.nicovideo.jp/pedia" target="_blank">ニコニコ大百科ブロマガ<img src="https://dic.nicovideo.jp/img/ext_ch.webp" class="link-icon" alt="exit_nicochannel"></a>（旧）</li>
-<li><a href="https://ch.nicovideo.jp/nico-nico-pedia/blomaga" target="_blank">ニコニコ大百科ブロマガ<img src="https://dic.nicovideo.jp/img/ext_ch.webp" class="link-icon" alt="exit_nicochannel"></a>（新）</li>
-<li><a href="https://x.com/nico_nico_pedia" target="_blank" rel="nofollow">ニコニコ大百科 (nico_nico_pedia) on X（旧Twitter）<img src="https://dic.nicovideo.jp/img/ext.webp" class="link-icon" alt="exit"></a>
+<li><a href="http://d.hatena.ne.jp/nicodic/" target="_blank" rel="nofollow">ニコニコ大百科開発日記<img src="/img/ext.webp" class="link-icon" alt="exit"></a>（旧<a class="auto" href="/a/%E6%97%A5%E8%A8%98">日記</a>）</li>
+<li><a href="http://blog.livedoor.jp/nico_nico_pedia/" target="_blank" rel="nofollow">ニコニコ大百科運営日記<img src="/img/ext.webp" class="link-icon" alt="exit"></a>（旧<a class="auto" href="/a/%E6%97%A5%E8%A8%98">日記</a>）</li>
+<li><a href="https://ch.nicovideo.jp/pedia" target="_blank">ニコニコ大百科ブロマガ<img src="/img/ext_ch.webp" class="link-icon" alt="exit_nicochannel"></a>（旧）</li>
+<li><a href="https://ch.nicovideo.jp/nico-nico-pedia/blomaga" target="_blank">ニコニコ大百科ブロマガ<img src="/img/ext_ch.webp" class="link-icon" alt="exit_nicochannel"></a>（新）</li>
+<li><a href="https://x.com/nico_nico_pedia" target="_blank" rel="nofollow">ニコニコ大百科 (nico_nico_pedia) on X（旧Twitter）<img src="/img/ext.webp" class="link-icon" alt="exit"></a>
 </li>
 </ul>
 <h2 style="background-image: url('https://dic.nicovideo.jp/oekaki/22697.png'); border-bottom: #f90 4px groove; padding: 5px 0 0 35px;" id="h2-7">関連項目</h2>
@@ -315,11 +276,11 @@ span.article a:not([class="dic"])[href^="http"][style*="background-image: none;"
 <div style="clear: both;"></div>
 <h3 style="background-image: url('https://dic.nicovideo.jp/oekaki/110523.png'); border-bottom: #f90 4px groove;">類似サービス</h3>
 <ul>
-<li><a class="auto" href="/a/wikipedia">Wikipedia</a> （→<a href="http://ja.wikipedia.org/wiki/%E3%83%8B%E3%82%B3%E3%83%8B%E3%82%B3%E5%A4%A7%E7%99%BE%E7%A7%91" target="_blank" rel="nofollow">Wikipedia上の「ニコニコ大百科」記事<img src="https://dic.nicovideo.jp/img/ext.webp" class="link-icon" alt="exit"></a>）</li>
-<li><a class="auto" href="/a/%E3%81%AF%E3%81%A6%E3%81%AA%E3%82%AD%E3%83%BC%E3%83%AF%E3%83%BC%E3%83%89">はてなキーワード</a> （→<a href="http://d.hatena.ne.jp/keyword/%A5%CB%A5%B3%A5%CB%A5%B3%C2%E7%C9%B4%B2%CA" target="_blank" rel="nofollow">はてなキーワードの「ニコニコ大百科」記事<img src="https://dic.nicovideo.jp/img/ext.webp" class="link-icon" alt="exit"></a>） - <a class="auto" href="/a/2019%E5%B9%B4">2019年</a><a class="auto" href="/a/%E3%81%AF%E3%81%A6%E3%81%AA">はてな</a><a class="auto" href="/a/%E3%83%96%E3%83%AD%E3%82%B0">ブログ</a><a class="auto" href="/a/%E3%82%BF%E3%82%B0">タグ</a>に<a class="auto" href="/a/%E3%83%AA%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%A2%E3%83%AB">リニューアル</a></li>
-<li><a class="auto" href="/a/%E3%82%A2%E3%83%B3%E3%82%B5%E3%82%A4%E3%82%AF%E3%83%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2">アンサイクロペディア</a> （→<a href="http://ja.uncyclopedia.info/wiki/%E3%83%8B%E3%82%B3%E3%83%8B%E3%82%B3%E5%A4%A7%E7%99%BE%E7%A7%91" target="_blank" rel="nofollow">アンサイクロペディア上の「ニコニコ大百科」記事<img src="https://dic.nicovideo.jp/img/ext.webp" class="link-icon" alt="exit"></a>）</li>
-<li><a class="auto" href="/a/%E3%83%94%E3%82%AF%E3%82%B7%E3%83%96%E7%99%BE%E7%A7%91%E4%BA%8B%E5%85%B8">ピクシブ百科事典</a> （→<a href="http://dic.pixiv.net/a/%E3%83%8B%E3%82%B3%E3%83%8B%E3%82%B3%E5%A4%A7%E7%99%BE%E7%A7%91" target="_blank" rel="nofollow">ピクシブ百科事典上の「ニコニコ大百科」記事<img src="https://dic.nicovideo.jp/img/ext.webp" class="link-icon" alt="exit"></a>）</li>
-<li><a class="auto" href="/a/chakuwiki">Chakuwiki</a> （→<a href="http://wiki.chakuriki.net/index.php/%E3%83%8B%E3%82%B3%E3%83%8B%E3%82%B3%E5%A4%A7%E7%99%BE%E7%A7%91" target="_blank" rel="nofollow">Chakuwiki上の「ニコニコ大百科」記事<img src="https://dic.nicovideo.jp/img/ext.webp" class="link-icon" alt="exit"></a>）</li>
+<li><a class="auto" href="/a/wikipedia">Wikipedia</a> （→<a href="http://ja.wikipedia.org/wiki/%E3%83%8B%E3%82%B3%E3%83%8B%E3%82%B3%E5%A4%A7%E7%99%BE%E7%A7%91" target="_blank" rel="nofollow">Wikipedia上の「ニコニコ大百科」記事<img src="/img/ext.webp" class="link-icon" alt="exit"></a>）</li>
+<li><a class="auto" href="/a/%E3%81%AF%E3%81%A6%E3%81%AA%E3%82%AD%E3%83%BC%E3%83%AF%E3%83%BC%E3%83%89">はてなキーワード</a> （→<a href="http://d.hatena.ne.jp/keyword/%A5%CB%A5%B3%A5%CB%A5%B3%C2%E7%C9%B4%B2%CA" target="_blank" rel="nofollow">はてなキーワードの「ニコニコ大百科」記事<img src="/img/ext.webp" class="link-icon" alt="exit"></a>） - <a class="auto" href="/a/2019%E5%B9%B4">2019年</a><a class="auto" href="/a/%E3%81%AF%E3%81%A6%E3%81%AA">はてな</a><a class="auto" href="/a/%E3%83%96%E3%83%AD%E3%82%B0">ブログ</a><a class="auto" href="/a/%E3%82%BF%E3%82%B0">タグ</a>に<a class="auto" href="/a/%E3%83%AA%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%A2%E3%83%AB">リニューアル</a></li>
+<li><a class="auto" href="/a/%E3%82%A2%E3%83%B3%E3%82%B5%E3%82%A4%E3%82%AF%E3%83%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2">アンサイクロペディア</a> （→<a href="http://ja.uncyclopedia.info/wiki/%E3%83%8B%E3%82%B3%E3%83%8B%E3%82%B3%E5%A4%A7%E7%99%BE%E7%A7%91" target="_blank" rel="nofollow">アンサイクロペディア上の「ニコニコ大百科」記事<img src="/img/ext.webp" class="link-icon" alt="exit"></a>）</li>
+<li><a class="auto" href="/a/%E3%83%94%E3%82%AF%E3%82%B7%E3%83%96%E7%99%BE%E7%A7%91%E4%BA%8B%E5%85%B8">ピクシブ百科事典</a> （→<a href="http://dic.pixiv.net/a/%E3%83%8B%E3%82%B3%E3%83%8B%E3%82%B3%E5%A4%A7%E7%99%BE%E7%A7%91" target="_blank" rel="nofollow">ピクシブ百科事典上の「ニコニコ大百科」記事<img src="/img/ext.webp" class="link-icon" alt="exit"></a>）</li>
+<li><a class="auto" href="/a/chakuwiki">Chakuwiki</a> （→<a href="http://wiki.chakuriki.net/index.php/%E3%83%8B%E3%82%B3%E3%83%8B%E3%82%B3%E5%A4%A7%E7%99%BE%E7%A7%91" target="_blank" rel="nofollow">Chakuwiki上の「ニコニコ大百科」記事<img src="/img/ext.webp" class="link-icon" alt="exit"></a>）</li>
 <li><a class="auto" href="/a/livedoor">livedoor</a> <a class="auto" href="/a/%E3%82%AD%E3%83%BC%E3%83%AF%E3%83%BC%E3%83%89">キーワード</a> - <a class="auto" href="/a/2006%E5%B9%B4">2006年</a>～。すでに<a class="auto" href="/a/%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E7%B5%82%E4%BA%86">サービス終了</a>している。終了時期は不明</li>
 </ul>
 <!-- ↓ニコニコテンプレート-->
@@ -349,7 +310,7 @@ span.article a:not([class="dic"])[href^="http"][style*="background-image: none;"
 <tr>
 <th style="border: 1px solid #fff; vertical-align: middle;"><a href="/id/392588" class="dic">関連サイト</a>
 </th>
-<td style="border: 1px solid #fff; text-align: left;"><a href="https://www.nicovideo.jp/?nicopedia_from=nicopedia_article_body_pc&amp;nicopedia_article_id=1" target="_blank">ニコニコトップ<img src="https://dic.nicovideo.jp/img/ext_nico.webp" class="link-icon" alt="exit_nicovideo"></a> - <a href="http://blog.nicovideo.jp/niconews/" target="_blank">インフォ<img src="https://dic.nicovideo.jp/img/ext.webp" class="link-icon" alt="exit"></a> - <a href="https://qa.nicovideo.jp/" target="_blank">ヘルプ<img src="/img/ext.webp" class="link-icon" alt="exit"></a>
+<td style="border: 1px solid #fff; text-align: left;"><a href="https://www.nicovideo.jp/?nicopedia_from=nicopedia_article_body_pc&amp;nicopedia_article_id=1" target="_blank">ニコニコトップ<img src="/img/ext_nico.webp" class="link-icon" alt="exit_nicovideo"></a> - <a href="http://blog.nicovideo.jp/niconews/" target="_blank">インフォ<img src="/img/ext.webp" class="link-icon" alt="exit"></a> - <a href="https://qa.nicovideo.jp/" target="_blank">ヘルプ<img src="/img/ext.webp" class="link-icon" alt="exit"></a>
 </td>
 </tr>
 </tbody>
@@ -433,7 +394,7 @@ span.article a:not([class="dic"])[href^="http"][style*="background-image: none;"
 <td colspan="2" style="border: 0; padding: 0; color: #4c4c4c; font-size: 10px; text-align: right;"><span style="display: none;"><a class="auto" href="/a/%E7%B7%A8%E9%9B%86%E8%80%85" style="color: #4c4c4c;">編集者</a>向け<a class="auto" href="/a/%E3%83%9A%E3%83%BC%E3%82%B8" style="color: #4c4c4c;">ページ</a><a class="auto" href="/a/%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88" style="color: #4c4c4c;">テンプレート</a></span>ve<a class="auto" href="/a/r20" style="color: #4c4c4c;">r20</a><a class="auto" href="/a/251" style="color: #4c4c4c;">251</a>013</td>
 </tr>
 </tfoot>
-</table><h2 id="h2-8">脚注</h2><ol><li><a id="fn-1" href="#cite-1" class="dic">*</a><a href="http://www.google.co.jp/search?q=%E5%A4%A7%E7%99%BE%E7%A7%91&amp;ie=utf-8&amp;oe=utf-8&amp;aq=t&amp;rls=org.mozilla:ja:official&amp;hl=ja&amp;client=firefox-a" target="_blank" rel="nofollow">大百科 - Google 検索<img src="https://dic.nicovideo.jp/img/ext.webp" class="link-icon" alt="exit"></a> <a href="http://search.yahoo.co.jp/search?p=%E5%A4%A7%E7%99%BE%E7%A7%91&amp;ei=UTF-8&amp;fr=mozff" target="_blank" rel="nofollow">「大百科」の検索結果 - Yahoo!検索<img src="https://dic.nicovideo.jp/img/ext.webp" class="link-icon" alt="exit"></a> <a href="http://www.bing.com/search?q=%E5%A4%A7%E7%99%BE%E7%A7%91&amp;go=&amp;form=QBRE&amp;filt=all&amp;qs=n&amp;sk=" target="_blank" rel="nofollow">大百科 - Bing<img src="https://dic.nicovideo.jp/img/ext.webp" class="link-icon" alt="exit"></a></li><li><a id="fn-2" href="#cite-2" class="dic">*</a><a href="https://ch.nicovideo.jp/pedia/blomaga/ar232442" target="_blank">ブロマガコメント欄でのはくはく氏の発言<img src="https://dic.nicovideo.jp/img/ext_ch.webp" class="link-icon" alt="exit_nicochannel"></a></li></ol>
+</table><h2 id="h2-8">脚注</h2><ol><li><a id="fn-1" href="#cite-1" class="dic">*</a><a href="http://www.google.co.jp/search?q=%E5%A4%A7%E7%99%BE%E7%A7%91&amp;ie=utf-8&amp;oe=utf-8&amp;aq=t&amp;rls=org.mozilla:ja:official&amp;hl=ja&amp;client=firefox-a" target="_blank" rel="nofollow">大百科 - Google 検索<img src="/img/ext.webp" class="link-icon" alt="exit"></a> <a href="http://search.yahoo.co.jp/search?p=%E5%A4%A7%E7%99%BE%E7%A7%91&amp;ei=UTF-8&amp;fr=mozff" target="_blank" rel="nofollow">「大百科」の検索結果 - Yahoo!検索<img src="/img/ext.webp" class="link-icon" alt="exit"></a> <a href="http://www.bing.com/search?q=%E5%A4%A7%E7%99%BE%E7%A7%91&amp;go=&amp;form=QBRE&amp;filt=all&amp;qs=n&amp;sk=" target="_blank" rel="nofollow">大百科 - Bing<img src="/img/ext.webp" class="link-icon" alt="exit"></a></li><li><a id="fn-2" href="#cite-2" class="dic">*</a><a href="https://ch.nicovideo.jp/pedia/blomaga/ar232442" target="_blank">ブロマガコメント欄でのはくはく氏の発言<img src="/img/ext_ch.webp" class="link-icon" alt="exit_nicochannel"></a></li></ol>
 <!-- ↑ニコニコ大百科：編集者向けページテンプレート -->
 
             <!--  内容ここまで -->
