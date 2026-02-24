@@ -87,6 +87,10 @@ a:not([class="dic"])[href^="http"][style*="background-image: none;"]::after {
     content: none;
 }
 
+/** ニコニコ大百科内リンク（ユーザーの記事編集による手動リンク） 過去リビジョン表示時の除外 **/
+.article a:not([class="dic"])[href*="dic.nicovideo.jp"]::after {
+    content: none;
+}
 
 
 
